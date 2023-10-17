@@ -1,0 +1,27 @@
+ [
+      {
+        "name": "Sony",
+        "img": "URL_TO_SONY_IMAGE"
+      },
+      {
+        "name": "Samsung",
+        "img": "URL_TO_SAMSUNG_IMAGE"
+      },
+      {
+        "name": "Apple",
+        "img": "URL_TO_APPLE_IMAGE"
+      },
+      {
+        "name": "Google",
+        "img": "URL_TO_LG_IMAGE"
+      },
+      {
+        "name": "Canon",
+        "img": "URL_TO_CANON_IMAGE"
+      },
+      {
+        "name": "Nikon",
+        "img": "URL_TO_NIKON_IMAGE"
+      }
+    ]
+  
