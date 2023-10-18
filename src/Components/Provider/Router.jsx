@@ -1,4 +1,4 @@
-import {  createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../MainLayout";
 import ErrorPage from "../ErrorPage";
 import Home from "../Pages/Home";
@@ -15,58 +15,72 @@ import Canon from "../Pages/Brand/Canon";
 import Nikon from "../Pages/Brand/Nikon";
 const myCreatedRoute = createBrowserRouter([
     {
-        path:'/',
-        element:<MainLayout></MainLayout>,
-        errorElement:<ErrorPage></ErrorPage>,
-        children:[
+        path: '/',
+        element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>,
-                loader: ()=> fetch('/brands.json')
+                path: '/',
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5000/brands')
             },
             {
-                path:'/addProduct',
-                element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+                path: '/products',
+                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/sony',
-                element:<Sony></Sony>
+                path: '/sony',
+                element: <Sony></Sony>
             },
             {
-                path:'/samsung',
-                element:<Samsung></Samsung>
+                path: '/samsung',
+                element: <Samsung></Samsung>
             },
+            // {
+            //     path: '/products/:name',
+            //     element: <Apple></Apple>,
+            //     loader: ({ params }) => {
+            //         console.log(params);
+            //         return fetch(`http://localhost:5000/products/${params.name}`)
+            //     }
+            // },
             {
                 path:'/apple',
-                element:<Apple></Apple>
+                element:<Apple></Apple>,
+                loader: () => fetch('http://localhost:5000/products')
+            },
+            // {
+            //     path: '/products/:name',
+            //     element: <Google></Google>,
+            //     loader: ({ params }) => {
+            //         console.log(params);
+            //         return fetch(`http://localhost:3500/products/${params.name}`)
+            //     }
+
+            // },
+            {
+                path: '/canon',
+                element: <Canon></Canon>
             },
             {
-                path:'/google',
-                element:<Google></Google>
+                path: '/nikon',
+                element: <Nikon></Nikon>
             },
             {
-                path:'/canon',
-                element:<Canon></Canon>
+                path: '/register',
+                element: <Register></Register>
             },
             {
-                path:'/nikon',
-                element:<Nikon></Nikon>
-            },
-            {
-                path:'/register',
-                element:<Register></Register>
-            },
-            {
-                path:'/cart',
-                element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
+                path: '/cart',
+                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
             },
         ]
     }
 ])
-    
+
 
 export default myCreatedRoute;

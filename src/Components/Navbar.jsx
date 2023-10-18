@@ -16,7 +16,7 @@ const Navbar = () => {
             <>
             <li> <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>Home</NavLink></li>
             <li> <NavLink to="/cart" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>My Cart</NavLink></li>
-            <li> <NavLink to="/addProduct" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>Add Product</NavLink></li>
+            <li> <NavLink to="/products" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>Add Product</NavLink></li>
             <li> <NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}> {user ?<button onClick={handleLogout} >Logout</button>
  : "Login"} </NavLink></li>
         </>

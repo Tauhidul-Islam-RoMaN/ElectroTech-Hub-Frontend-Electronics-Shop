@@ -9,11 +9,11 @@ const PrivateRoute = ({ children }) => {
 
     if (loading) {
         return (<>
-            <div>
-                <span className="loading loading-spinner text-accent"></span>
-                <span className="loading loading-spinner text-accent"></span>
-                <span className="loading loading-spinner text-accent"></span>
-                <span className="loading loading-spinner text-accent"></span>
+            <div className="flex justify-center items-center">
+                <span className="loading loading-spinner text-4xl text-accent"></span>
+                <span className="loading loading-spinner text-4xl text-accent"></span>
+                <span className="loading loading-spinner text-4xl text-accent"></span>
+                <span className="loading loading-spinner text-4xl text-accent"></span>
             </div>
         </>
         )
