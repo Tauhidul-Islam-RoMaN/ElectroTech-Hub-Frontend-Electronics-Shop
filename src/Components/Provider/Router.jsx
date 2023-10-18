@@ -7,6 +7,12 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import MyCart from "../Pages/MyCart";
 import PrivateRoute from "./PrivateRoute";
+import Sony from "../Pages/Brand/Sony";
+import Samsung from "../Pages/Brand/Samsung";
+import Apple from "../Pages/Brand/Apple";
+import Google from "../Pages/Brand/Google";
+import Canon from "../Pages/Brand/Canon";
+import Nikon from "../Pages/Brand/Nikon";
 const myCreatedRoute = createBrowserRouter([
     {
         path:'/',
@@ -15,7 +21,8 @@ const myCreatedRoute = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader: ()=> fetch('/brands.json')
             },
             {
                 path:'/addProduct',
@@ -24,6 +31,30 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path:'/login',
                 element:<Login></Login>
+            },
+            {
+                path:'/sony',
+                element:<Sony></Sony>
+            },
+            {
+                path:'/samsung',
+                element:<Samsung></Samsung>
+            },
+            {
+                path:'/apple',
+                element:<Apple></Apple>
+            },
+            {
+                path:'/google',
+                element:<Google></Google>
+            },
+            {
+                path:'/canon',
+                element:<Canon></Canon>
+            },
+            {
+                path:'/nikon',
+                element:<Nikon></Nikon>
             },
             {
                 path:'/register',

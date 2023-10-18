@@ -1,27 +1,27 @@
  [
       {
         "name": "Sony",
-        "img": "URL_TO_SONY_IMAGE"
-      },
+        "img": "https://i.ibb.co/0D2K1FR/vecteezy-sony-logo-editorial-vector-22424342.jpg"
+      },   
       {
         "name": "Samsung",
-        "img": "URL_TO_SAMSUNG_IMAGE"
+        "img": "https://i.ibb.co/6Ws3ynh/samsung.png"
       },
       {
         "name": "Apple",
-        "img": "URL_TO_APPLE_IMAGE"
+        "img": "https://i.ibb.co/1nN29y8/apple.jpg"
       },
       {
         "name": "Google",
-        "img": "URL_TO_LG_IMAGE"
+        "img": "https://i.ibb.co/yyNj8cn/google.webp"
       },
       {
         "name": "Canon",
-        "img": "URL_TO_CANON_IMAGE"
+        "img": "https://i.ibb.co/Hd5qGBQ/canon.png"
       },
       {
         "name": "Nikon",
-        "img": "URL_TO_NIKON_IMAGE"
+        "img": "https://i.ibb.co/y48Qdgy/nikon.png"
       }
     ]
   
