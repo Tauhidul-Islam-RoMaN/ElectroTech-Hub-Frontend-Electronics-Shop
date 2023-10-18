@@ -1,31 +1,13 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
-const AppleCard = ({ product }) => {
-    const { brand, description, name, photo, price, rating, type, _id } = product
+const CanonCard = ({ product }) => {
+    const { brand, name, photo, price, rating, type } = product
     return (
 
-        
+
 
         <>
-            {/* <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <div>
-                    <img className="rounded-t-lg" src={photo} alt="" />
-                </div>
-                <div className="p-5">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Product Name: <span className="font-normal">{name}</span></h5>
-                    <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Brand: <span className="font-normal">{brand}</span></h5>
-                    <p className="mb-3 font-bold text-gray-700 dark:text-gray-400">Product Type: <span className="font-normal">{type} Tk </span> </p>
-                    <p className="mb-3 font-bold text-gray-700 dark:text-gray-400">Price: <span className="font-normal">{price} Tk </span> </p>
-                    <p className="mb-3 font-bold text-gray-700 dark:text-gray-400">Rating: <span className="font-normal">{rating}</span> </p>
-                    <Link to={`${name}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-accent rounded-lg">
-                        Details
-                        <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </Link>
-                </div>
-            </div> */}
-
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
                 <img className="p-8 rounded-t-lg" src={photo} alt="product image" />
@@ -53,4 +35,8 @@ const AppleCard = ({ product }) => {
     );
 };
 
-export default AppleCard;
+CanonCard.propTypes = {
+    product: PropTypes.object
+}
+
+export default CanonCard;

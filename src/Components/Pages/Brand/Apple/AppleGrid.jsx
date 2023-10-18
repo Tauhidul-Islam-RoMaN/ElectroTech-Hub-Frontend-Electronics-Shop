@@ -12,6 +12,6 @@ const AppleGrid = ({appleProducts}) => {
 };
 
 AppleGrid.propTypes = {
-    appleProducts: PropTypes.object
+    appleProducts: PropTypes.array
 }
 export default AppleGrid;

@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
-const GoogleCard = () => {
-    const { brand, description, name, photo, price, rating, type, _id } = product
-
+const SamsungCard = ({ product }) => {
+    const { brand, name, photo, price, rating, type } = product
     return (
-        <div>
+
+
+
+        <>
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
                 <img className="p-8 rounded-t-lg" src={photo} alt="product image" />
@@ -26,8 +30,13 @@ const GoogleCard = () => {
                 </div>
             </div>
 
-        </div>
+        </>
+
     );
 };
 
-export default GoogleCard;
+SamsungCard.propTypes = {
+    product: PropTypes.object
+}
+
+export default SamsungCard;
