@@ -34,7 +34,7 @@ const AddProduct = () => {
         <div className="pb-32 pt-16" >
             <div className="bg-[#F4F3F0] lg:max-w-4xl md:max-w-2xl mx-auto">
                 <div className="lg:mx-32 pt-10 md:mx-16">
-                    <h2 className="text-[#331A15] text-cmb-3 text-2xl md:text-6xl">Add New Product</h2>
+                    <h2 className="text-[#331A15] text-center mb-3 text-2xl md:text-6xl">Add New Product</h2>
                 </div>
                 <form onSubmit={handleAddProduct} className="mt-6">
                     <div className=" flex justify-between md:gap-10 gap-2 mx-10 pb-6 ">

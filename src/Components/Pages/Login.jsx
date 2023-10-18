@@ -14,15 +14,18 @@ const Login = () => {
         googleLogin()
         .then(res => {
             console.log(res.user);
+            
         })
         .catch(err => {
             console.error(err);
+            
         })
     }
 
     const handleLogin = (e) => {
 
         setErrorMessage("")
+        setSuccessMessage("")
         e.preventDefault()
         const form = e.target
         const password= form.password.value
@@ -35,9 +38,10 @@ const Login = () => {
             setSuccessMessage("Login successful")
             return
         })
-        .catch(err => {
-            console.error(err);
-            return setErrorMessage(err.Message)
+        .catch(error => {
+            console.error(error.message);
+            return setErrorMessage(error.message)
+            
         })
 
         
