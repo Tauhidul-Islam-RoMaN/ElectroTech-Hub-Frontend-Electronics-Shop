@@ -3,6 +3,9 @@ import MainLayout from "../MainLayout";
 import ErrorPage from "../ErrorPage";
 import Home from "../Pages/Home";
 import AddProduct from "../Pages/AddProduct";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import MyCart from "../Pages/MyCart";
 const myCreatedRoute = createBrowserRouter([
     {
         path:'/',
@@ -18,12 +21,16 @@ const myCreatedRoute = createBrowserRouter([
                 element:<AddProduct></AddProduct>
             },
             {
-                path:'/',
-                element:<Home></Home>
+                path:'/login',
+                element:<Login></Login>
             },
             {
-                path:'/',
-                element:<Home></Home>
+                path:'/register',
+                element:<Register></Register>
+            },
+            {
+                path:'/cart',
+                element:<MyCart></MyCart>
             },
         ]
     }

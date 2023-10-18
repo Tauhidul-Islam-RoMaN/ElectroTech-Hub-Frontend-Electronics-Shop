@@ -1,14 +1,26 @@
 import { NavLink } from "react-router-dom";
+import useAuth from "./Provider/useAuth";
+import auth from "./Firebase/Firebase.config";
 const Navbar = () => {
+
+    const { user, logOut } = useAuth()
+    const handleLogout=()=>{
+        logOut(auth)
+        .then(res => 
+            console.log(res))
+        .catch(err => {
+            console.error(err);
+        })
+    }
     const navLinks =
-
-        <>
-            <li> <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : "btn"}>Home</NavLink></li>
-            <li> <NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>My Cart</NavLink></li>
+            <>
+            <li> <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>Home</NavLink></li>
+            <li> <NavLink to="/cart" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>My Cart</NavLink></li>
             <li> <NavLink to="/addProduct" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>Add Product</NavLink></li>
-            <li> <NavLink to="/myCard" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>Login</NavLink></li>
-
+            <li> <NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}> {user ?<button onClick={handleLogout} >Logout</button>
+ : "Login"} </NavLink></li>
         </>
+
 
     return (
         <div>
@@ -29,9 +41,13 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <div className="w-10 rounded-full">
-                    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
+                {
+                    user ?
+                        <div className="flex items-center gap-5">
+                            <div><img className="w-20 rounded-full" src={user?.photoURL} /></div>
+                        </div>
+                        : ""
+                }
             </div>
         </div>
     );

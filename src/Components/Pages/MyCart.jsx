@@ -1,5 +1,5 @@
 
-const MyCard = () => {
+const MyCart = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const MyCard = () => {
     );
 };
 
-export default MyCard;
+export default MyCart;
