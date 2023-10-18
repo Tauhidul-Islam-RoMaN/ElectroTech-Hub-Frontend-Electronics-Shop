@@ -1,15 +1,18 @@
 import { useLoaderData } from "react-router-dom";
-import AppleCard from "./AppleCard";
+import AppleGrid from "./AppleGrid";
 
 const Apple = () => {
+
     const loadedData = useLoaderData()
     console.log(loadedData);
 
-    
+    const appleProducts = loadedData.filter(obj => obj.brand === "Apple")
+    console.log(appleProducts);
+
     return (
-        <div className="grid grid-col-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div>
             {
-                // loadedData.map( product => <AppleCard key={product._id} product={product}></AppleCard> )
+                <AppleGrid key={appleProducts.name} appleProducts={appleProducts} ></AppleGrid>
             }
         </div>
     );

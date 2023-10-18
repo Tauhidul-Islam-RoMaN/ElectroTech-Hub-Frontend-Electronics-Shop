@@ -13,6 +13,7 @@ import Apple from "../Pages/Brand/Apple";
 import Google from "../Pages/Brand/Google";
 import Canon from "../Pages/Brand/Canon";
 import Nikon from "../Pages/Brand/Nikon";
+import BrandFiltering from "../Pages/Brand/BrandFiltering";
 const myCreatedRoute = createBrowserRouter([
     {
         path: '/',
@@ -27,6 +28,11 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: '/products',
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+            },
+            {
+                path:'/brand',
+                element:<BrandFiltering></BrandFiltering>,
+                loader: () => fetch('http://localhost:5000/products')
             },
             {
                 path: '/login',
@@ -48,20 +54,21 @@ const myCreatedRoute = createBrowserRouter([
             //         return fetch(`http://localhost:5000/products/${params.name}`)
             //     }
             // },
+   
             {
                 path:'/apple',
                 element:<Apple></Apple>,
                 loader: () => fetch('http://localhost:5000/products')
             },
-            // {
-            //     path: '/products/:name',
-            //     element: <Google></Google>,
-            //     loader: ({ params }) => {
-            //         console.log(params);
-            //         return fetch(`http://localhost:3500/products/${params.name}`)
-            //     }
+            {
+                path: '/products/:name',
+                element: <Google></Google>,
+                loader: ({ params }) => {
+                    console.log(params);
+                    return fetch(`http://localhost:3500/products/${params.name}`)
+                }
 
-            // },
+            },
             {
                 path: '/canon',
                 element: <Canon></Canon>
