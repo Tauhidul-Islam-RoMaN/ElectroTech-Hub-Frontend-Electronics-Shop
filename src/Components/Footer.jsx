@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="bg-white">
                 <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                     <div className="lg:flex lg:items-start lg:gap-8">
-                        <div className="text-teal-600">
+                        <div className="text-accent">
                             <svg
                                 className="h-8"
                                 viewBox="0 0 28 24"
@@ -20,9 +20,7 @@ const Footer = () => {
                             </svg>
                         </div>
 
-                        <div
-                            className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16"
-                        >
+                        <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
                             <div className="col-span-2">
                                 <div>
                                     <h2 className="text-2xl font-bold text-gray-900">
@@ -34,26 +32,21 @@ const Footer = () => {
                                     </p>
                                 </div>
                             </div>
-
                             <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
                                 <form className="w-full">
                                     <label htmlFor="UserEmail" className="sr-only"> Email </label>
 
-                                    <div
-                                        className="border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4"
-                                    >
+                                    <div className="border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4">
                                         <input
                                             type="email"
                                             id="UserEmail"
-                                            placeholder="john@rhcp.com"
-                                            className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm"
+                                            placeholder="Enter tour mail"
+                                            className="w-full border-none py-2 focus:border-transparent focus:ring-transparent sm:text-sm"
                                         />
 
-                                        <button
-                                            className="mt-1 w-full bg-teal-500 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0"
-                                        >
+                                        <Link><button className="mt-1 w-full bg-accent px-6 rounded-lg py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
                                             Subscribe to Newsletter
-                                        </button>
+                                        </button></Link>
                                     </div>
                                 </form>
                             </div>
@@ -63,19 +56,19 @@ const Footer = () => {
 
                                 <ul className="mt-6 space-y-4 text-sm">
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             About
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             Meet the Team
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             Accounts Review
                                         </Link>
                                     </li>
@@ -87,19 +80,19 @@ const Footer = () => {
 
                                 <ul className="mt-6 space-y-4 text-sm">
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             Contact
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             FAQs
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             Live Chat
                                         </Link>
                                     </li>
@@ -111,25 +104,25 @@ const Footer = () => {
 
                                 <ul className="mt-6 space-y-4 text-sm">
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             Accessibility
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             Returns Policy
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             Refund Policy
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link  className="text-gray-700 transition hover:opacity-75">
+                                        <Link className="text-gray-700 transition hover:opacity-75">
                                             Hiring Statistics
                                         </Link>
                                     </li>
@@ -148,19 +141,19 @@ const Footer = () => {
                                 className="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end"
                             >
                                 <li>
-                                    <Link  className="text-gray-500 transition hover:opacity-75">
+                                    <Link className="text-gray-500 transition hover:opacity-75">
                                         Terms & Conditions
                                     </Link>
                                 </li>
 
                                 <li>
-                                    <Link  className="text-gray-500 transition hover:opacity-75">
+                                    <Link className="text-gray-500 transition hover:opacity-75">
                                         Privacy Policy
                                     </Link>
                                 </li>
 
                                 <li>
-                                    <Link  className="text-gray-500 transition hover:opacity-75">
+                                    <Link className="text-gray-500 transition hover:opacity-75">
                                         Cookies
                                     </Link>
                                 </li>
