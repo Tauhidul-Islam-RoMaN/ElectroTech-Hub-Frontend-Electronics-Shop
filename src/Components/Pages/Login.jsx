@@ -1,12 +1,14 @@
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Provider/useAuth";
 import { useState } from "react";
 
 const Login = () => {
 
     const {login, googleLogin} = useAuth()
-
+    const navigate = useNavigate()
+    const location = useLocation()
+    console.log(location);
     const [successMessage, setSuccessMessage] = useState()
     const [errorMessage, setErrorMessage] = useState()
 
@@ -14,6 +16,8 @@ const Login = () => {
         googleLogin()
         .then(res => {
             console.log(res.user);
+            navigate(location?.state ? location.state : '/')
+
             
         })
         .catch(err => {
@@ -36,6 +40,7 @@ const Login = () => {
         .then(res => {
             console.log(res.user);
             setSuccessMessage("Login successful")
+            navigate(location?.state ? location.state : '/')
             return
         })
         .catch(error => {
