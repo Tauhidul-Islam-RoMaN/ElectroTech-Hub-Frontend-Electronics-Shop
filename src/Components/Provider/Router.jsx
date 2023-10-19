@@ -42,7 +42,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/apple/updateProduct/:id',
-                element: <UpdateProduct></UpdateProduct>,
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -55,7 +55,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: "/apple/:id",
-                element: <SingleAppleGrid></SingleAppleGrid>,
+                element: <PrivateRoute><SingleAppleGrid></SingleAppleGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -68,7 +68,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: "/google/:id",
-                element: <SingleGoogleGrid></SingleGoogleGrid>,
+                element: <PrivateRoute><SingleGoogleGrid></SingleGoogleGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -76,7 +76,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/google/updateProduct/:id',
-                element: <UpdateProduct></UpdateProduct>,
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -89,7 +89,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: "/canon/:id",
-                element: <SingleCanonGrid></SingleCanonGrid>,
+                element: <PrivateRoute><SingleCanonGrid></SingleCanonGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -97,7 +97,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/canon/updateProduct/:id',
-                element: <UpdateProduct></UpdateProduct>,
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -110,7 +110,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: "/nikon/:id",
-                element: <SingleNikonGrid></SingleNikonGrid>,
+                element: <PrivateRoute><SingleNikonGrid></SingleNikonGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -118,7 +118,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/nikon/updateProduct/:id',
-                element: <UpdateProduct></UpdateProduct>,
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -131,7 +131,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: "/samsung/:id",
-                element: <SingleSamsungGrid></SingleSamsungGrid>,
+                element: <PrivateRoute><SingleSamsungGrid></SingleSamsungGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -139,7 +139,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/samsung/updateProduct/:id',
-                element: <UpdateProduct></UpdateProduct>,
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -152,7 +152,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: "/sony/:id",
-                element: <SingleSonyGrid></SingleSonyGrid>,
+                element: <PrivateRoute><SingleSonyGrid></SingleSonyGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);
@@ -160,7 +160,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/sony/updateProduct/:id',
-                element: <UpdateProduct></UpdateProduct>,
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
                     return fetch(`http://localhost:5000/products/${params.id}`);

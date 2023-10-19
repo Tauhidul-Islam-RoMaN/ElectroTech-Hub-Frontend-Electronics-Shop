@@ -16,7 +16,7 @@ const Nikon = () => {
                 <NikonGrid key={nikonProducts.name} nikonProducts={nikonProducts} ></NikonGrid>
              : 
              <div className="my-20">
-                <h2 className="text-4xl font-bold text-center text-accent">Oops!!!! <br /> No Data Available</h2>
+                <h2 className="text-4xl font-bold text-center text-accent">Oops!!!! <br /> No Product Available</h2>
              </div>
             
            }
