@@ -4,27 +4,27 @@ import auth from "./Firebase/Firebase.config";
 const Navbar = () => {
 
     const { user, logOut } = useAuth()
-    const handleLogout=()=>{
+    const handleLogout = () => {
         logOut(auth)
-        .then(res => 
-            console.log(res))
-        .catch(err => {
-            console.error(err);
-        })
+            .then(res =>
+                console.log(res))
+            .catch(err => {
+                console.error(err);
+            })
     }
     const navLinks =
-            <>
+        <>
             <li> <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>Home</NavLink></li>
             <li> <NavLink to="/cart" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>My Cart</NavLink></li>
             <li> <NavLink to="/products" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}>Add Product</NavLink></li>
-            <li> <NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}> {user ?<button onClick={handleLogout} >Logout</button>
- : "Login"} </NavLink></li>
+            <li> <NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "btn btn-accent text-white " : ""}> {user ? <button onClick={handleLogout} >Logout</button>
+                : "Login"} </NavLink></li>
         </>
 
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="flex items-center md:mx-10 bg-base-100">
                 <div className="flex justify-center mx-auto items-center">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -34,7 +34,10 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">ElectroTech Hub</a>
+                    <div className="flex gap-0 justify-start items-center">
+                        <img className="lg:w-52 md:w-40 w-20" src="https://i.ibb.co/HVvYzFd/logo.png" alt="" />
+                        <p className="md:Font-bold text-center md:text-3xl">ElectroTech Hub</p>
+                    </div>
                 </div>
                 <div className=" hidden lg:flex">
                     <ul className="p-4 flex items-center gap-10">
@@ -43,8 +46,8 @@ const Navbar = () => {
                 </div>
                 {
                     user ?
-                        <div className="flex items-center gap-5">
-                            <div><img className="w-20 rounded-full" src={user?.photoURL} /></div>
+                        <div className="flex items-center justify-end gap-0 md:gap-5">
+                            <div><img className="md:w-20 w-12 rounded-full" src={user?.photoURL} /></div>
                             <p className="text-xs md:text-base">{user?.displayName} </p>
                         </div>
                         : ""

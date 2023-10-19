@@ -13,6 +13,7 @@ import Google from "../Pages/Brand/Google/Google";
 import Canon from "../Pages/Brand/Canon/Canon";
 import Nikon from "../Pages/Brand/Nikon/Nikon";
 import Register from "../Pages/Register";
+import UpdateProduct from "../Pages/UpdateProduct";
 
 const myCreatedRoute = createBrowserRouter([
     {
@@ -32,6 +33,11 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/updateProduct/:name',
+                element: <UpdateProduct></UpdateProduct>,
+                loader: ({params}) => fetch(``)
             },
             {
                 path: '/sony',

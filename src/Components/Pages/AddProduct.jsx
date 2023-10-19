@@ -5,7 +5,7 @@ const AddProduct = () => {
     const handleAddProduct = (e) => {
         e.preventDefault()
         const form = e.target
-        // form.reset("")
+        form.reset("")
         const name = form.name.value
         const brand = form.brand.value
         const price = form.price.value
