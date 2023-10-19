@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css/pagination'; 
 import 'swiper/css/scrollbar';
 
 const AppleGrid = ({ appleProducts }) => {
@@ -19,7 +19,7 @@ const AppleGrid = ({ appleProducts }) => {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
             >
-                <SwiperSlide> <img src="https://i.ibb.co/FKMt2my/pixel-c.jpg" alt="" /> </SwiperSlide>
+                <SwiperSlide className=''> <img src="https://i.ibb.co/FKMt2my/pixel-c.jpg" alt="" /> </SwiperSlide>
                 <SwiperSlide> <img src="https://i.ibb.co/FKMt2my/pixel-c.jpg" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://i.ibb.co/hyw0p9Q/nest-audio.webp" alt="" /></SwiperSlide>
                 <SwiperSlide>Slide 4</SwiperSlide>

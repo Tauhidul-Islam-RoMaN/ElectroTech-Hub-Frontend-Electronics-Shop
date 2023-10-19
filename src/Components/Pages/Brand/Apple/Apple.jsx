@@ -10,7 +10,7 @@ const Apple = () => {
     console.log(appleProducts);
 
     return (
-        <div>
+        <div className="mx-10">
             {
                 <AppleGrid key={appleProducts.name} appleProducts={appleProducts} ></AppleGrid>
             }

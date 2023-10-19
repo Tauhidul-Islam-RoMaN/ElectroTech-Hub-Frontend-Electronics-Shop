@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const CanonCard = ({ product }) => {
-    const { brand, name, photo, price, rating, type } = product
+    const { brand, name, photo, price, rating, _id, type } = product
     return (
 
 
@@ -24,8 +24,8 @@ const CanonCard = ({ product }) => {
                     </div>
                     <div className="flex items-center justify-between">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">Tk {price}</span>
-                        <Link to={`updateProduct/${name}`} ><button className="btn text-white btn-accent">Update</button></Link>
-                        <Link to={`${name}`}><button className="btn text-white btn-accent">Details</button></Link>
+                        <Link to={`updateProduct/${_id}`} ><button className="btn text-white btn-accent">Update</button></Link>
+                        <Link to={`${_id}`}><button className="btn text-white btn-accent">Details</button></Link>
                     </div>
                 </div>
             </div>
