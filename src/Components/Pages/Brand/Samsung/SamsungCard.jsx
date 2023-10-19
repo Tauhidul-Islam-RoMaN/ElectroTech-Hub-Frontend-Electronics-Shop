@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const SamsungCard = ({ product }) => {
-    const { brand, name, photo, price, rating, type,_id } = product
+    const { brand, name, photo, price, rating, description,type,_id } = product
     return (
 
 
@@ -22,6 +22,12 @@ const SamsungCard = ({ product }) => {
                         </svg>
                         <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">{rating}</span>
                     </div>
+                    <div className="mb-4">
+                        {
+                            description.length> 100 ? description.slice(0,100) + "..." : description
+                        }
+                    </div>
+
                     <div className="flex items-center justify-between">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">Tk {price}</span>
                         <Link to={`updateProduct/${_id}`} ><button className="btn text-white btn-accent">Update</button></Link>

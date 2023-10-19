@@ -1,11 +1,34 @@
-import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import Swal from 'sweetalert2';
 
-const SonyCard = ({ product }) => {
-    const { brand, name, photo, price, rating, description, type,_id } = product
+const Cart = ({ product }) => {
+    const { brand, name, photo, price, description, _id, rating, type } = product
+
+
+    const handleDelete = (_id) => {
+
+        fetch(`http://localhost:5000/cart/${_id}`, {
+            method: "DELETE",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                
+                console.log(data);
+                if (data?.deletedCount > 1) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Your Product from cart has been deleted.',
+                        'success'
+                    )
+                }
+                const remaining = coffees.filter(item => item._id !== _id)
+                console.log(remaining);
+                setCoffees(remaining)
+            });
+
+
+    }
     return (
-
-
 
         <>
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -24,24 +47,22 @@ const SonyCard = ({ product }) => {
                     </div>
                     <div className="mb-4">
                         {
-                            description.length> 100 ? description.slice(0,100) + "..." : description
+                            description.length > 100 ? description.slice(0, 100) + "..." : description
                         }
                     </div>
                     <div className="flex items-center justify-between">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">Tk {price}</span>
-                        <Link to={`updateProduct/${_id}`} ><button className="btn text-white btn-accent">Update</button></Link>
-                        <Link to={`${_id}`}><button className="btn text-white btn-accent">Details</button></Link>
+                        <button type="submit" onClick={()=> handleDelete(_id)} >Delete</button>
                     </div>
                 </div>
             </div>
 
         </>
-
     );
 };
 
-SonyCard.propTypes = {
-    product: PropTypes.object
+Cart.propTypes = {
+    product: PropTypes.object,
 }
 
-export default SonyCard;
+export default Cart;

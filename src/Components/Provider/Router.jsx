@@ -20,6 +20,7 @@ import SingleNikonGrid from "../Pages/Brand/Nikon/SingleNikonGrid";
 import SingleSamsungGrid from "../Pages/Brand/Samsung/SingleSamsungGrid";
 import SingleSonyGrid from "../Pages/Brand/Sony/SingleSonyGrid";
 import UpdateProduct from "../Pages/UpdateProduct";
+// import CanonProductDetails from "../Pages/Brand/Canon/CanonProductDetails";
 
 const myCreatedRoute = createBrowserRouter([
     {
@@ -172,7 +173,8 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/cart',
-                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
+                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+                loader: () => fetch('http://localhost:5000/cart')
             },
         ]
     }
