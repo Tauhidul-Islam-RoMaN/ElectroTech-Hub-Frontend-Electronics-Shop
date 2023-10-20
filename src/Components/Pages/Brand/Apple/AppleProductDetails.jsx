@@ -8,13 +8,13 @@ const AppleProductDetails = ({ appleProducts }) => {
 
     const { user } = useAuth()
 
-    const handleAddToCart = () => {
+    const handleAddToCart = () => { 
 
         const email = user?.email
 
         const data = {email,brand, name, photo, price, description, rating, type }
 
-        fetch('https://assignment-10-server-40rtxf79s-romans-projects-caf8547b.vercel.app/cart', {
+        fetch('http://localhost:5000/cart', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

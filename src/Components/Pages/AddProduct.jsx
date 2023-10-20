@@ -17,7 +17,7 @@ const AddProduct = () => {
         const newProduct = { name, brand, price, description, rating, photo, type }
         console.log(newProduct);
 
-        fetch("https://assignment-10-server-40rtxf79s-romans-projects-caf8547b.vercel.app/products", {
+        fetch("http://localhost:5000/products", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -33,7 +33,6 @@ const AddProduct = () => {
     const handleAddBrand = (e) => {
         e.preventDefault()
         const form = e.target
-        form.reset("")
         const name = form.name.value
         const photo = form.photo.value
 
@@ -41,7 +40,7 @@ const AddProduct = () => {
         console.log(newBrand);
 
 
-        fetch("https://assignment-10-server-40rtxf79s-romans-projects-caf8547b.vercel.app/brands", {
+        fetch("http://localhost:5000/brands", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -51,7 +50,10 @@ const AddProduct = () => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
+                form.reset()
             });
+
+
     }
     return (
         <>
