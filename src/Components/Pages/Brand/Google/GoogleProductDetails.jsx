@@ -3,7 +3,7 @@ import useAuth from '../../../Provider/useAuth';
 import Swal from 'sweetalert2';
 
 const GoogleProductDetails = ({googleProducts}) => {
-    const { brand, name, photo, price, description, rating,_id, type } = googleProducts
+    const { brand, name, photo, price, description, rating, type } = googleProducts
 
     const { user } = useAuth()
 
@@ -11,7 +11,7 @@ const GoogleProductDetails = ({googleProducts}) => {
 
         const email = user?.email
 
-        const data = {email,brand, name, photo, price, description, rating, _id, type }
+        const data = {email,brand, name, photo, price, description, rating, type }
 
         fetch('https://assignment-10-server-40rtxf79s-romans-projects-caf8547b.vercel.app/cart', {
             method: "POST",

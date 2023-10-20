@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 const CanonProductDetails = ({ canonProducts }) => {
    
 
-    const { brand, name, photo, price, description, rating, _id, type } = canonProducts
+    const { brand, name, photo, price, description, rating, type } = canonProducts
     console.log(canonProducts);
 
     const { user } = useAuth()
@@ -14,7 +14,7 @@ const CanonProductDetails = ({ canonProducts }) => {
 
         const email = user?.email
 
-        const data = {email,brand, name, photo, price, description, rating, _id, type }
+        const data = {email,brand, name, photo, price, description, rating, type }
 
         fetch('https://assignment-10-server-40rtxf79s-romans-projects-caf8547b.vercel.app/cart', {
             method: "POST",
