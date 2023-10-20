@@ -18,7 +18,7 @@ const AddProduct = () => {
         const newProduct = { name, brand, price, description, rating, photo, type }
         console.log(newProduct);
 
-        fetch("https://assignment-10-server-8fuf37gsv-romans-projects-caf8547b.vercel.app/products", {
+        fetch("https://assignment-10-server-ten-tan.vercel.app/products", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const AddProduct = () => {
         console.log(newBrand);
 
 
-        fetch("https://assignment-10-server-8fuf37gsv-romans-projects-caf8547b.vercel.app/brands", {
+        fetch("https://assignment-10-server-ten-tan.vercel.app/brands", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

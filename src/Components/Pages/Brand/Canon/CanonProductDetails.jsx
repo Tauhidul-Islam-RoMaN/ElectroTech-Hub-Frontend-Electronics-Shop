@@ -16,7 +16,7 @@ const CanonProductDetails = ({ canonProducts }) => {
 
         const data = {email,brand, name, photo, price, description, rating, type }
 
-        fetch('https://assignment-10-server-8fuf37gsv-romans-projects-caf8547b.vercel.app/cart', {
+        fetch('https://assignment-10-server-ten-tan.vercel.app/cart', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

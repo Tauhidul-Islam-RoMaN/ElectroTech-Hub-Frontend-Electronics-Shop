@@ -21,7 +21,7 @@ const UpdateProduct = () => {
         const updatedProduct = { name, brand, price, description, rating, photo, type }
         console.log(updatedProduct);
 
-        fetch(`https://assignment-10-server-8fuf37gsv-romans-projects-caf8547b.vercel.app/products/${_id}`, {
+        fetch(`https://assignment-10-server-ten-tan.vercel.app/products/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
