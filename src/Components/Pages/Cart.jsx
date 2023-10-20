@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import Swal from 'sweetalert2';
 
-const Cart = ({ product }) => {
+const Cart = ({ product, updatedCarts, setUpdatedCarts }) => {
     const { brand, name, photo, price, description, _id, rating, type } = product
-
+// console.log(Array.isArray(updatedCarts),updatedCarts);
+console.log();
 
     const handleDelete = (_id) => {
 
@@ -21,9 +22,10 @@ const Cart = ({ product }) => {
                         'success'
                     )
                 }
-                const remaining = coffees.filter(item => item._id !== _id)
-                console.log(remaining);
-                setCoffees(remaining)
+                const remaining = updatedCarts.filter(item => item._id != _id)
+                console.log(Array.isArray(remaining));
+                console.log(Array.isArray(remaining),remaining);
+                setUpdatedCarts(remaining)
             });
 
 
@@ -52,7 +54,7 @@ const Cart = ({ product }) => {
                     </div>
                     <div className="flex items-center justify-between">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">Tk {price}</span>
-                        <button type="submit" onClick={()=> handleDelete(_id)} >Delete</button>
+                        <button type="submit" className='btn btn-accent' onClick={()=> handleDelete(_id)} >Delete</button>
                     </div>
                 </div>
             </div>
@@ -63,6 +65,8 @@ const Cart = ({ product }) => {
 
 Cart.propTypes = {
     product: PropTypes.object,
+    updatedCarts:PropTypes.array,
+    setUpdatedCarts:PropTypes.func
 }
 
 export default Cart;

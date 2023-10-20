@@ -1,7 +1,36 @@
 import PropTypes from 'prop-types';
+import useAuth from '../../../Provider/useAuth';
+import Swal from 'sweetalert2';
 
 const SonyProductDetails = ({sonyProducts}) => {
-    const { brand, name, photo, price, description, rating, type } = sonyProducts
+    const { brand, name, photo, price, description, rating, type,_id } = sonyProducts
+
+    const { user } = useAuth()
+
+    const handleAddToCart = () => {
+
+        const email = user?.email
+
+        const data = {email,brand, name, photo, price, description, rating, _id, type }
+
+        fetch('http://localhost:5000/cart', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.acknowledged) {
+                    Swal.fire(
+                        'Product added to your cart!',
+                        'success'
+                      )
+                }
+            });
+    };
 
     return (
         <>
@@ -29,7 +58,7 @@ const SonyProductDetails = ({sonyProducts}) => {
                     </div>
                     <div className="flex items-center justify-between">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">Tk {price}</span>
-                        <button className="btn text-white btn-accent">Add To Cart</button>
+                        <button onClick={handleAddToCart} className="btn text-white btn-accent">Add To Cart</button>
                     </div>
                 </div>
             </div>
