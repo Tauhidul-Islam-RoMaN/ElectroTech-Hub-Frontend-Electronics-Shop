@@ -14,7 +14,7 @@ const AppleProductDetails = ({ appleProducts }) => {
 
         const data = {email,brand, name, photo, price, description, rating, type }
 
-        fetch('https://assignment-10-server-pmwdhmvp8-romans-projects-caf8547b.vercel.app/cart', {
+        fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/cart', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
