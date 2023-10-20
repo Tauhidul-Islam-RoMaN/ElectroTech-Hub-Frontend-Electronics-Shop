@@ -18,7 +18,7 @@ const MyCart = () => {
 
     return (
         <div>
-            <MyCartGrid key={userCarts} userCarts={userCarts}></MyCartGrid>
+            <MyCartGrid key={userCarts} setUserCarts={setUserCarts} userCarts={userCarts}></MyCartGrid>
         </div>
     );
 };

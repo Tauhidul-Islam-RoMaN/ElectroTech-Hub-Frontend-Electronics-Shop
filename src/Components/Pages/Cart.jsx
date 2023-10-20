@@ -1,30 +1,31 @@
 import PropTypes from 'prop-types';
 import Swal from 'sweetalert2';
 
-const Cart = ({ product, updatedCarts, setUpdatedCarts }) => {
+const Cart = ({ product, updatedCarts, setUserCarts }) => {
     const { brand, name, photo, price, description, _id, rating, type } = product
-// console.log(Array.isArray(updatedCarts),updatedCarts);
-console.log();
+    // console.log(Array.isArray(updatedCarts),updatedCarts);
+    console.log(updatedCarts);
 
-    const handleDelete = (_id) => {
-
+    const handleDelete = (id) => {
+console.log("hello");
         fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/cart/${_id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
-            .then((data) => {                
+            .then((data) => {
                 console.log(data);
-                if (data?.deletedCount > 1) {
-                    Swal.fire(
-                        'Deleted!',
-                        'Your Product from cart has been deleted.',
-                        'success'
-                    )
-                }
-                const remaining = updatedCarts.filter(item => item._id != _id)
-                console.log(Array.isArray(remaining));
-                console.log(Array.isArray(remaining),remaining);
-                setUpdatedCarts(remaining)
+                Swal.fire(
+                    'Deleted!',
+                    'Your Product from cart has been deleted.',
+                    'success'
+                )
+                const remaining = updatedCarts.filter(item => item._id != id)
+                setUserCarts(remaining)
+                console.log(remaining);
+                // if (data?.deletedCount > 0) {
+
+                // }
+
             });
 
 
@@ -53,7 +54,7 @@ console.log();
                     </div>
                     <div className="flex items-center justify-between">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">Tk {price}</span>
-                        <button type="submit" className='btn btn-accent' onClick={()=> handleDelete(_id)} >Delete</button>
+                        <button className='btn btn-accent' onClick={() => handleDelete(_id)} >Delete</button>
                     </div>
                 </div>
             </div>
@@ -64,8 +65,8 @@ console.log();
 
 Cart.propTypes = {
     product: PropTypes.object,
-    updatedCarts:PropTypes.array,
-    setUpdatedCarts:PropTypes.func
+    updatedCarts: PropTypes.array,
+    setUserCarts: PropTypes.func
 }
 
 export default Cart;
