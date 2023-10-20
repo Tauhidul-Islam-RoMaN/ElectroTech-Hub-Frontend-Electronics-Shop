@@ -25,7 +25,7 @@ const Home = () => {
             </div>
             <div className="mt-20 mx-5 ">
                 <h2 className="text-2xl md:text-5xl font-bold text-center text-accent"> Why Us?</h2>
-                <div className="flex flex-col md:flex-col items-center gap-5 justify-around my-10 font-bold">
+                <div className="flex flex-col md:flex-row items-center gap-5 justify-around my-10 font-bold">
                     <div className="gap-4  flex items-center ">
                         <TbTruckDelivery className="text-5xl"></TbTruckDelivery>
                         <p>Free Delivery</p>
@@ -46,7 +46,7 @@ const Home = () => {
             </div>
             <div className="mt-20 mx-5">
                 <h2 className="text-2xl md:text-5xl font-bold text-center text-accent"> Connect With Us</h2>
-                <div className="flex flex-col md:flex-col items-center gap-5 justify-around my-10 font-bold">
+                <div className="flex flex-col md:flex-row items-center gap-5 justify-around my-10 font-bold">
                     <div className="gap-4 flex items-center ">
                         <FaFacebook className="text-5xl"></FaFacebook>
                         <p className="hover:underline hover:text-blue-600">FaceBook</p>
