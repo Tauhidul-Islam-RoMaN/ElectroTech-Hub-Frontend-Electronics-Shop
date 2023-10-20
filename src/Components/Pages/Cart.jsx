@@ -8,7 +8,7 @@ const Cart = ({ product, updatedCarts, setUserCarts }) => {
 
     const handleDelete = (id) => {
 console.log("hello");
-        fetch(`http://localhost:5000/cart/${_id}`, {
+        fetch(`https://assignment-10-server-8fuf37gsv-romans-projects-caf8547b.vercel.app/cart/${_id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
