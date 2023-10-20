@@ -7,7 +7,7 @@ const SingleCanonGrid = () => {
 
 
     return (
-        <div className="mx-10">
+        <div className="mx-2">
             {
                 <CanonProductDetails key={loadedData._id} canonProducts={loadedData} ></CanonProductDetails>
             }

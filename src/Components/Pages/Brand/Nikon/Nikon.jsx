@@ -9,7 +9,7 @@ const Nikon = () => {
     console.log(nikonProducts);
 
     return (
-        <div>
+        <div className="mx5">
            {
             nikonProducts.length ?  
             

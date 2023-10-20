@@ -1,8 +1,12 @@
-# React + Vite
+This is a Electronic & Technology based website
+Key Features: 
+1. You will find different electronic products from different brand
+2. You will have the access to insert product to the server
+3. You will also have the access to update the products
+4. you can add your favorite product to your cart
+5. you can also delete product from your cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Here is the live link of my client server
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://assignment-10firebase.web.app/

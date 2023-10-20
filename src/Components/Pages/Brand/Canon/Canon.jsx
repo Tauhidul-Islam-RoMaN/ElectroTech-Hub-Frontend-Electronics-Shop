@@ -9,7 +9,7 @@ const Canon = () => {
     console.log(canonProducts);
 
     return (
-        <div>
+        <div className="mx-5">
             {
                 <CanonGrid key={canonProducts.name} canonProducts={canonProducts} ></CanonGrid>
             }

@@ -8,7 +8,7 @@ const SingleNikonGrid = () => {
 
 
     return (
-        <div className="mx-10">
+        <div className="mx-2">
             {
                 <NikonProductDetails key={loadedData._id} nikonProducts={loadedData} ></NikonProductDetails>
             }

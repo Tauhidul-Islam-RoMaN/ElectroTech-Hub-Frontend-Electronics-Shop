@@ -9,7 +9,7 @@ const Google = () => {
     console.log(googleProducts);
 
     return (
-        <div>
+        <div className="mx-5">
             {
                 <GoogleGrid key={googleProducts.name} googleProducts={googleProducts} ></GoogleGrid>
             }

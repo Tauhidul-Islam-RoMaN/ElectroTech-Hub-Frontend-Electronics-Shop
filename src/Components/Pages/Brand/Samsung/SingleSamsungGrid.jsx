@@ -7,7 +7,7 @@ const SingleSamsungGrid = () => {
 
 
     return (
-        <div className="mx-10">
+        <div className="mx-2">
             {
                 <SamsungProductDetails key={loadedData._id} samsungProducts={loadedData} ></SamsungProductDetails>
             }

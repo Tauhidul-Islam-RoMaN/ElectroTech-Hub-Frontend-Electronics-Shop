@@ -7,7 +7,7 @@ const SingleGoogleGrid = () => {
 
 
     return (
-        <div className="mx-10">
+        <div className="mx-2">
             {
                 <GoogleProductDetails key={loadedData._id} googleProducts={loadedData} ></GoogleProductDetails>
             }

@@ -30,7 +30,7 @@ const SamsungCard = ({ product }) => {
 
                     <div className="flex items-center justify-between">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">Tk {price}</span>
-                        <Link to={`updateProduct/${_id}`} ><button className="btn text-white btn-accent">Update</button></Link>
+                        <Link to={`updateProduct/${_id}`} ><button className="btn mr-2 text-white btn-accent">Update</button></Link>
                         <Link to={`${_id}`}><button className="btn text-white btn-accent">Details</button></Link>
                     </div>
                 </div>

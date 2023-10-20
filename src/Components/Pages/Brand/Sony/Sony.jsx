@@ -10,7 +10,7 @@ const Sony = () => {
     console.log(sonyProducts);
 
     return (
-        <div>
+        <div className="mx-5">
             {
                 <SonyGrid key={sonyProducts.name} sonyProducts={sonyProducts} ></SonyGrid>
             }

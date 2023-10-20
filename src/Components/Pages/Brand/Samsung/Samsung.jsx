@@ -9,7 +9,7 @@ const Samsung = () => {
     console.log(samsungProducts);
 
     return (
-        <div>
+        <div className="mx-5">
             {
                 <SamsungGrid key={samsungProducts.name} samsungProducts={samsungProducts} ></SamsungGrid>
             }
