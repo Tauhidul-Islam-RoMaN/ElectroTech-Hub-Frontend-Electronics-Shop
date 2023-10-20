@@ -31,7 +31,7 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/brands'),
+                loader: () => fetch('http://localhost:5000/brands'),
             },
             {
                 path: '/products',
@@ -46,33 +46,33 @@ const myCreatedRoute = createBrowserRouter([
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
                 path: '/apple',
                 element: <Apple></Apple>,
-                loader: () => fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products')
+                loader: () => fetch('http://localhost:5000/products')
             },
             {
                 path: "/apple/:id",
                 element: <PrivateRoute><SingleAppleGrid></SingleAppleGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
                 path: '/google',
                 element: <Google></Google>,
-                loader: () => fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products')
+                loader: () => fetch('http://localhost:5000/products')
             },
             {
                 path: "/google/:id",
                 element: <PrivateRoute><SingleGoogleGrid></SingleGoogleGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
@@ -80,20 +80,20 @@ const myCreatedRoute = createBrowserRouter([
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
                 path: '/canon',
                 element: <Canon></Canon>,
-                loader: () => fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products')
+                loader: () => fetch('http://localhost:5000/products')
             },
             {
                 path: "/canon/:id",
                 element: <PrivateRoute><SingleCanonGrid></SingleCanonGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
@@ -101,20 +101,20 @@ const myCreatedRoute = createBrowserRouter([
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
                 path: '/nikon',
                 element: <Nikon></Nikon>,
-                loader: () => fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products')
+                loader: () => fetch('http://localhost:5000/products')
             },
             {
                 path: "/nikon/:id",
                 element: <PrivateRoute><SingleNikonGrid></SingleNikonGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
@@ -122,20 +122,20 @@ const myCreatedRoute = createBrowserRouter([
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
                 path: '/samsung',
                 element: <Samsung></Samsung>,
-                loader: () => fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products')
+                loader: () => fetch('http://localhost:5000/products')
             },
             {
                 path: "/samsung/:id",
                 element: <PrivateRoute><SingleSamsungGrid></SingleSamsungGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
@@ -143,20 +143,20 @@ const myCreatedRoute = createBrowserRouter([
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
                 path: '/sony',
                 element: <Sony></Sony>,
-                loader: () => fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products')
+                loader: () => fetch('http://localhost:5000/products')
             },
             {
                 path: "/sony/:id",
                 element: <PrivateRoute><SingleSonyGrid></SingleSonyGrid></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
@@ -164,7 +164,7 @@ const myCreatedRoute = createBrowserRouter([
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => {
                     console.log(params);
-                    return fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${params.id}`);
+                    return fetch(`http://localhost:5000/products/${params.id}`);
                 },
             },
             {
@@ -174,7 +174,7 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: '/cart',
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/cart')
+                loader: () => fetch('http://localhost:5000/cart')
             },
         ]
     }

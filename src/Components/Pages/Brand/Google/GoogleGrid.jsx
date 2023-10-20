@@ -11,7 +11,7 @@ import 'swiper/css/scrollbar';
 const GoogleGrid = ({ googleProducts }) => {
     return (
         <>
-            <Swiper className='my-20'
+            <Swiper className='my-10'
                 modules={[Navigation, Pagination, A11y]}
                 spaceBetween={50}
                 slidesPerView={1}
@@ -20,10 +20,12 @@ const GoogleGrid = ({ googleProducts }) => {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
             >
-                <SwiperSlide className=''> <img src="https://i.ibb.co/FKMt2my/pixel-c.jpg" alt="" /> </SwiperSlide>
-                <SwiperSlide> <img src="https://i.ibb.co/FKMt2my/pixel-c.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="https://i.ibb.co/hyw0p9Q/nest-audio.webp" alt="" /></SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide><img className=' flex items-center mx-auto justify-center' src="https://i.ibb.co/1qCg5VC/4.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className=' flex items-center  mx-auto justify-center' src="https://i.ibb.co/5BLKvpK/1-2.jpg" alt="" /> </SwiperSlide>
+                <SwiperSlide><img className=' flex items-center my-auto mx-auto justify-center' src="https://i.ibb.co/2MXX8Wf/3.jpg" alt="" /></SwiperSlide>
+
+
+
             </Swiper>
             <div className="grid grid-col-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
                 {

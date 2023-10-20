@@ -14,7 +14,7 @@ const SamsungProductDetails = ({samsungProducts}) => {
 
         const data = {email,brand, name, photo, price, description, rating, type }
 
-        fetch('https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/cart', {
+        fetch('http://localhost:5000/cart', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

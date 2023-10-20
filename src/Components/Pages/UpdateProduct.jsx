@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
     const product = useLoaderData()
@@ -20,7 +21,7 @@ const UpdateProduct = () => {
         const updatedProduct = { name, brand, price, description, rating, photo, type }
         console.log(updatedProduct);
 
-        fetch(`https://assignment-10-server-lp82chnbt-romans-projects-caf8547b.vercel.app/products/${_id}`, {
+        fetch(`http://localhost:5000/products/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -30,6 +31,11 @@ const UpdateProduct = () => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
+                Swal.fire(
+                    'Updated!',
+                    'Your Product Updated Successfully.',
+                    'success'
+                )
             });
     }
 
